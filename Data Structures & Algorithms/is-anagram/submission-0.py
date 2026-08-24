@@ -1,0 +1,17 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        count1 = {}
+        count2 = {}
+        for ch in s:
+            if ch in count1:
+                count1[ch] += 1
+            else:
+                count1[ch] = 1
+
+        for ch in t:
+            if ch in count2:
+                count2[ch] +=1
+            else:
+                count2[ch] =1
+
+        return count1 == count2
